@@ -8,7 +8,7 @@
     </select>
   </div>
   <div class="form-group">
-    <input type="number" ng-model="selectedDay">
+    <input type="number" ng-model="selectedDay" min="{{ day }}" max="{{ selectedMonth.days }}" required>
   </div>
   <button ng-click="addTurn()">Add turn</button>
   </span>
