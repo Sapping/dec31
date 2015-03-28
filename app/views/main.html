@@ -1,0 +1,17 @@
+<div class="container">
+  <h2>December 31, the game</h2>
+
+<!-- Turns input -->
+<div class="row">
+  <div class="form-group">
+    <select ng-model="selectedMonth" ng-options="opt as opt.label for opt in calendar">
+    </select>
+  </div>
+  <div class="form-group">
+    <input type="number" ng-model="selectedDay">
+  </div>
+  <button ng-click="addTurn()">Add turn</button>
+  </span>
+</div>
+The current day is {{ month }} the {{ day }}.
+</div>
