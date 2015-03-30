@@ -26,11 +26,21 @@ angular.module('dec31App')
     $scope.selectedMonth = $scope.calendar[0];
     $scope.selectedDay = 1;
     $scope.month = 'January';
-    $scope.day = '1';
+    $scope.day = 1;
+    $scope.compareMonth = $scope.selectedMonth.value;
 
     $scope.addTurn = function(){
       $scope.month = $scope.selectedMonth.label;
       $scope.day = $scope.selectedDay;
+      $scope.compareMonth = $scope.selectedMonth.value;// Added here so that values stay linked when turn is added.
     };
-
-  });
+    $scope.gameCalendar = {};
+    $scope.update = function(calendar){
+        $scope.gameCalendar = angular.copy(calendar);
+    };
+    $scope.trimMonths = function(gameCalendar) {
+    }
+    $scope.largerThanMonth = function(p){
+        return p.value >= $scope.compareMonth;
+    }
+});
