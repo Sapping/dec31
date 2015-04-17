@@ -29,6 +29,12 @@ angular.module('dec31App')
     $scope.day = 1;
     $scope.compareMonth = $scope.selectedMonth.value;
     $scope.playerTurn = 1;
+    if ($scope.playerTurn%2===0){
+        $scope.turnColor = '#66CCFF';
+    }
+    else{
+        $scope.turnColor = '#FF0033';
+    }
 
     $scope.addTurn = function(){
         if ($scope.selectedMonth.label != $scope.month && $scope.selectedDay != $scope.day){
