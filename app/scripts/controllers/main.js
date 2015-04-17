@@ -30,17 +30,24 @@ angular.module('dec31App')
     $scope.compareMonth = $scope.selectedMonth.value;
 
     $scope.addTurn = function(){
-      $scope.month = $scope.selectedMonth.label;
-      $scope.day = $scope.selectedDay;
-      $scope.compareMonth = $scope.selectedMonth.value;// Added here so that values stay linked when turn is added.
+        if ($scope.selectedMonth.label != $scope.month && $scope.selectedDay != $scope.day){
+            alert("You can't change both the day and month on the same turn.");
+        }
+        else {
+            if ($scope.selectedMonth.label == $scope.month && $scope.selectedDay != $scope.day){
+            $scope.day = $scope.selectedDay;
+            }
+            $scope.month = $scope.selectedMonth.label;
+            $scope.compareMonth = $scope.selectedMonth.value;
+        }
     };
     $scope.gameCalendar = {};
     $scope.update = function(calendar){
         $scope.gameCalendar = angular.copy(calendar);
     };
     $scope.trimMonths = function(gameCalendar) {
-    }
+    };
     $scope.largerThanMonth = function(p){
         return p.value >= $scope.compareMonth;
-    }
+    };
 });
