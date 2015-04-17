@@ -28,17 +28,25 @@ angular.module('dec31App')
     $scope.month = 'January';
     $scope.day = 1;
     $scope.compareMonth = $scope.selectedMonth.value;
+    $scope.playerTurn = 1;
 
     $scope.addTurn = function(){
         if ($scope.selectedMonth.label != $scope.month && $scope.selectedDay != $scope.day){
             alert("You can't change both the day and month on the same turn.");
         }
+        if ($scope.selectedMonth.label == $scope.month && $scope.selectedDay == $scope.day){
+            alert("You have to change either the month or the day.");
+        }
         else {
             if ($scope.selectedMonth.label == $scope.month && $scope.selectedDay != $scope.day){
             $scope.day = $scope.selectedDay;
+            $scope.playerTurn ++;
             }
+            if ($scope.selectedMonth.label != $scope.month && $scope.selectedDay == $scope.day){
             $scope.month = $scope.selectedMonth.label;
             $scope.compareMonth = $scope.selectedMonth.value;
+            $scope.playerTurn ++;
+            }
         }
     };
     $scope.gameCalendar = {};
