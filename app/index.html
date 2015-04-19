@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>December 31st | Lucas Melin</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -14,7 +14,9 @@
     <!-- build:css(.tmp) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"><link href="http://fonts.googleapis.com/css?family=Lato:400,400italic" rel="stylesheet">
   </head>
+    <nav role="navigation" class="navbar navbar-default navbar-static-top"><div class="container-fluid"><!-- Brand and toggle button--><div class="navbar-header"><button type="button" data-toggle="collapse" data-target="#nav-header-collapse" class="navbar-toggle collapsed"><span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button><a href="/" class="navbar-brand">Lucas</a></div><!-- Nav links that get toggled--><div id="nav-header-collapse" class="collapse navbar-collapse"><ul class="nav navbar-nav"><li><a href="/journal">Articles</a></li><li><a href="/contact">Contact</a></li></ul></div></div></nav>
   <body ng-app="dec31App">
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -22,30 +24,24 @@
 
     <!-- Add your site or application content here -->
     <div class="container">
-      <div class="header">
-        <!-- <ul class="nav nav-pills pull-right">
-          <li class="active"><a ng-href="#">Home</a></li>
-          <li><a ng-href="#/about">About</a></li>
-          <li><a ng-href="#">Contact</a></li>
-        </ul>
-        <h3 class="text-muted">dec31</h3> -->
-      </div>
-
-      <div ng-view=""></div>
-
+    <div class="col-xs-9">
+    <div ng-view=""></div>
     </div>
+    </div>
+
+    <div id="footer"><p style="font-size:60%;" class="text-center">Copyright &copy; Lucas Melin 2014</p><p class="text-center"><a href="https://plus.google.com/+LucasMelin/"><span style="font-size:.7em;" class="fa-stack fa-lg"><i class="fa fa-circle fa-stack-2x"></i><i class="fa fa-google-plus fa-stack-1x fa-inverse"></i></span></a><a href="https://github.com/Sapping"><i style="padding-right:4px;" class="fa fa-github fa-lg"></i></a></p></div>
+
+
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+      ga('create', 'UA-55428024-2', 'auto');
+      ga('send', 'pageview');</script>
 
     <!-- build:js(.) scripts/oldieshim.js -->
     <!--[if lt IE 9]>
@@ -72,6 +68,8 @@
         <script src="scripts/app.js"></script>
         <script src="scripts/controllers/main.js"></script>
         <script src="scripts/controllers/about.js"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="/app/scripts/bootstrap.min.js"></script>
         <!-- endbuild -->
 </body>
 </html>
